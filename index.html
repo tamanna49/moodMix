@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Changer Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6c3a1b4d9a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <div id="logo"><img src="MoodMix-removebg-preview.png" alt=""></div>
+            <div id="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="index.html#songs">Songs</a></li>
+                    <li><a href="index.html#jokes">Jokes</a></li>
+                    <li><a href="index.html#quotes">Quotes</a></li>
+                </ul>
+            </div>
+            <div id="nav-search">
+                <button id="loginBtn">Login</button>
+
+                <!-- The login form pop-up container -->
+                <div id="loginPopup" class="popup">
+                    <span class="close" id="closeBtn">&times;</span>
+                    
+                    <form action="login_process.php" method="post">
+                        <label for="username">Username:</label><br>
+                        <input type="text" id="username" name="username" required><br><br>
+
+                        <label for="password">Password:</label><br>
+                        <input type="password" id="password" name="password" required><br><br>
+
+                        <input type="submit" value="Login" id="loginFinal">
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section id="banner">
+
+        <div id="banner-img">
+            <img src="dazzle.png" id="bannerimage" alt="">
+        </div>
+        <aside>
+            <!-- <h3>Elevate your Mood</h3> -->
+            <div id="menu">
+                <div class="menu-div">
+                    <a href="index.html#songs"><img src="music1.webp" alt=""></a>
+                    <a href="index.html#songs"><h4>Tune in</h4></a>
+                </div>
+                <div class="menu-div">
+                   <a href="index.html#jokes"> <img src="jokes.png" alt=""></a>
+                   <a href="index.html#jokes"><h4>Laugh Out</h4></a>
+                    <!-- <h4>Laugh out</h4> -->
+                </div>
+                <div class="menu-div">
+                    <a href="index.html#quotes"><img src="quote1.png" alt=""></a>
+                    <a href="index.html#quotes"><h4>Quotes Search</h4></a>
+                </div>
+                <div class="menu-div">
+                    <a href="index.html#memes"><img src="meme.jpeg" alt=""></a>
+                    <a href="index.html#memes"><h4>Meme Around</h4></a>
+                </div>
+            </div>
+        </aside>
+    </section>
+    <br><br>
+    <h1 style="text-align: center;">Start Your Day with a Motivational Quote</h1>
+    <section id="quotes">
+        <div id="inner-quotes">
+            <div class="innerquote">
+                <div id="quote-container">
+                    <div style="margin-left:20px;">
+                        <p id="quote">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga iusto commodi
+                            deleniti ad sint quis.
+                        </p><br>
+                        <h3 id="author">lorem ipsum</h3><br>
+                    </div>
+                </div>
+                <div id="quote-btn">
+                    <div id="quotesbtn"><button id="btn">Get Quote</button></div>
+                    <div id="react"><button id="heart"><i class="fa-regular fa-heart"></i></button>
+                        <button id="like"><i class="fa-regular fa-thumbs-up"></i></button>
+                        <button id="refresh"><i class='fa fa-refresh'></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="innerquote1">
+                <div class="quote-image"><img src="quote2.webp" alt=""></div>
+                <div class="quote-image"><img src="quote1.webp" alt=""></div>
+                <div class="quote-image"><img src="quote3.jpeg" alt=""></div>
+            </div>
+        </div>
+    </section>
+    <br><br>
+    <h1 style="text-align: center;">Find Solace In Music</h1>
+    <section id="songs">
+        <div id="inner-songs">
+            <div id="songs-categories">
+                <div class="songscategories">
+                    <!-- <div><a href="index.html#songs"><img src="Happy.png" alt="" id="happy-songs"></a></div> -->
+                    <div><img src="Happy.png" alt="" id="happy-songs"></div>
+                </div>
+                <div class="songscategories">
+                    <!-- <div><a href="index.html#songs"><img src="Chill.png" alt=""></a></div> -->
+                    <div><img src="Chill.png" alt="" id="chill-songs"></div>
+                </div>
+                <div class="songscategories">
+                    <!-- <div><a href="index.html#songs"><img src="energeticF.png" alt=""></a></div> -->
+                    <div><img src="energeticF.png" alt="" id="energetic-songs"></div>
+                </div>
+            </div>
+            <div id="songs-desc">
+                <div id="songs-explore">
+                    <h1>Explore Songs based on your Mood</h1>
+                </div>
+                <div id="songs-container"></div>
+                <div id="songs-btn"><a href="you.html"><button>Explore More</button></a></div>
+            </div>
+        </div>
+    </section>
+    <br><br>
+    <h1 style="text-align: center;">Add a little humor to your day</h1>
+    <br><br><br>
+    <section id="jokes">
+        <div id="inner-jokes">
+            <div id="jokes-img">
+                <img src="JOKES2.png" alt="">
+                <!-- <div id="joke-btn"><button id="jokebtn">Get Jokes</button></div> -->
+            </div>
+            <div id="jokes-desc">
+                <div class="jokesdesc" id="jokes-btn"><button id="jokebtn">Get Jokes</button></div>
+                <div class="jokesdesc" id="jokes-display">
+                    <div>
+                        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus obcaecati ipsam voluptas -->
+                        <!-- similique hic reiciendis, eum quod voluptatibus facilis nobis!</p> -->
+                        <img src="jokes3.png" alt="">
+                    </div>
+                    <div>
+                        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus veritatis maxime
+                            commodi! Amet expedita officia eum magnam deserunt numquam.</p> -->
+                        <img src="jokes4.png" alt="">
+                    </div>
+                </div>
+                <div id="joke-container" class="jokesdesc">
+                    <div id="joke-category">
+                        <h3>lorem ispus</h3>
+                    </div>
+                    <div id="joke-content">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi, at.</p>
+                    </div>
+
+                </div>
+                <!-- <div>
+                    <button id="heart"><i class="fa-regular fa-heart"></i></button>
+                    <button id="like"><i class="fa-regular fa-thumbs-up"></i></button>
+                    <button id="refresh"><i class='fa fa-refresh'></i></button>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    </section>
+    <br><br><br>
+    <h1 style="text-align: center;">Find The Perfect memes for you</h1><br>
+    <section id="memes">
+        <div id="inner-memes">
+            <div class="memes-container" id="memes-container1">
+                <div><img src="quote3.jpeg" alt=""></div>
+                <div><img src="quote1.webp" alt=""></div>
+                <div><img src="quote2.webp" alt=""></div>
+            </div>
+            <div class="memes-container" id="memes-container2">
+                <div><img src="quote2.webp" alt=""></div>
+                <button id="memes-btn">Get Memes</button>
+                <div><img src="quote1.webp" alt=""></div>
+            </div>
+        </div>
+    </section>
+  
+    <!-- <script src="https://kit.fontawesome.com/f6dcf461c1.js"></script> -->
+    <footer class="footer">
+        <div class="footer1" id="footer-list">
+            <a href="#">Home</a>
+            <a href="index.html#songs">Songs</a>
+            <a href="index.html#jokes">Jokes</a>
+            <a href="index.html#quotes">Quotes</ai>
+        </div>
+        <div class="footer1">
+            <a href="https://www.instagram.com/your_instagram_profile" target="_blank">
+                <i class="fa-brands fa-instagram"></i> <p>Instagram</p>
+            </a>
+            <a href="https://twitter.com/your_twitter_profile" target="_blank">
+                <i class="fa-brands fa-twitter"></i> <p>Twitter</p>
+            </a>
+            <a href="mailto:your.email@gmail.com">
+                <i class="fa-solid fa-envelope"></i> <p>Gmail</p>
+            </a>
+        </div>
+
+            
+        <div class="footer1">
+        <p>&copy; 2023 My Website. All rights reserved.</p>
+        </div>
+        </footer> 
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script> 
+  
+   <!-- <footer>
+    <div class="waves">
+        <div class="wave" id="wave1"></div>
+    </div>
+    <ul class="social_icons" style="display: flex; list-style: none;">
+        <li>
+            <a href="#">
+                <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+        </li>
+        <li>
+            <a href="https://youtu.be/hHTteL5zbs8">
+                <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+        </li>
+    </ul>
+    <br>
+    <ul class="menu" style="display: flex; list-style: none;">
+        <li>
+            <a class="a" href="index.html">Home</a>
+        </li>
+        <li>
+            <a class="a" href="songs.html">Sunglasses</a>
+        </li>
+        <li>
+            <a class="a" href="jokes.html">Eyeglasses</a>
+        </li>
+        <li>
+            <a class="a" href="quotes.html">About us</a>
+        </li>
+        
+    </ul>
+    <p><h1 style="color:#fff;">Lens <span style="color:aquamarine">Love</span></h1></p>
+     --> 
+    
+<!-- </footer> -->
+<!-- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> -->
+<script src="script.js"></script>
+</body>
+
+</html>

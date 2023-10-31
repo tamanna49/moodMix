@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #joke-container {
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+        }
+
+        #joke-category {
+            width: 100px;
+            height: 100px;
+        }
+
+        /* Style for the pop-up container */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        /* Style for the close button */
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        /* Style for the login form inside the pop-up */
+        .popup form {
+            background-color: #fff;
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <button id="loginBtn">Login</button>
+
+    <!-- The login form pop-up container -->
+    <div id="loginPopup" class="popup">
+        <span class="close" id="closeBtn">&times;</span>
+        <h2>Login</h2>
+        <form action="login_process.php" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <input type="submit" value="Login">
+        </form>
+    </div>
+
+    <div id="jokes">
+        <div id="joke-category"></div>
+        <div id="joke-container"></div>
+        <!-- <div id="joke-setup"></div> -->
+    </div>
+    <button id="btn">click me</button>
+    <script>
+
+        let jokes = document.getElementById("joke-container");
+        // let author=document.getElementById("author");
+        let btn = document.getElementById("btn");
+        let content = document.getElementById("joke-category");
+        // const url="";
+
+        let getJokes = () => {
+            fetch("https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single")
+                .then(data => data.json())
+                .then(item => {
+                    console.log(item);
+                    content.innerText = item.category;
+                    jokes.textContent = `${item.joke}`;
+                });
+        }
+        // getJokes();
+
+        window.addEventListener("load", getJokes);
+        btn.addEventListener("click", getJokes);
+        // Get references to the login button, pop-up, and close button
+        const loginBtn = document.getElementById("loginBtn");
+        const loginPopup = document.getElementById("loginPopup");
+        const closeBtn = document.getElementById("closeBtn");
+
+        // Show the pop-up when the login button is clicked
+        loginBtn.addEventListener("click", function () {
+            loginPopup.style.display = "block";
+        });
+
+        // Close the pop-up when the close button is clicked
+        closeBtn.addEventListener("click", function () {
+            loginPopup.style.display = "none";
+        });
+
+        // Close the pop-up if the user clicks outside of it
+        window.addEventListener("click", function (event) {
+            if (event.target === loginPopup) {
+                loginPopup.style.display = "none";
+            }
+        });
+
+    </script>
+</body>
+
+</html>
